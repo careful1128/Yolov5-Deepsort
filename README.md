@@ -1,17 +1,6 @@
-# 本文禁止转载!
-
-
-本文地址：[https://blog.csdn.net/weixin_44936889/article/details/112002152](https://blog.csdn.net/weixin_44936889/article/details/112002152)
-
 # 项目简介：
 使用YOLOv5+Deepsort实现车辆行人追踪和计数，代码封装成一个Detector类，更容易嵌入到自己的项目中。
 
-代码地址（欢迎star）：
-
-[https://github.com/Sharpiless/yolov5-deepsort/](https://github.com/Sharpiless/yolov5-deepsort/)
-
-最终效果：
-![在这里插入图片描述](https://github.com/Sharpiless/Yolov5-Deepsort/blob/main/image.png)
 # YOLOv5检测器：
 
 ```python
@@ -97,11 +86,6 @@ deepsort = DeepSort(cfg.DEEPSORT.REID_CKPT,
 python demo.py
 ```
 
-# 训练自己的模型：
-参考我的另一篇博客：
-
-[【小白CV】手把手教你用YOLOv5训练自己的数据集（从Windows环境配置到模型部署）](https://blog.csdn.net/weixin_44936889/article/details/110661862)
-
 训练好后放到 weights 文件夹下
 
 # 调用接口：
@@ -124,16 +108,17 @@ result = det.feedCap(im)
 
 返回的 result 是字典，result['frame'] 返回可视化后的图像
 
-# 联系作者：
+## 最新修改：
 
-> B站：[https://space.bilibili.com/470550823](https://space.bilibili.com/470550823)
+增加计数显示功能
 
-> CSDN：[https://blog.csdn.net/weixin_44936889](https://blog.csdn.net/weixin_44936889)
+修改numpy新版中警告问题
+![alt text](image.png)
 
-> AI Studio：[https://aistudio.baidu.com/aistudio/personalcenter/thirdview/67156](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/67156)
+修改Python PyYAML 库常用的两个函数的区别问题
+![alt text](image-1.png)
 
-> Github：[https://github.com/Sharpiless](https://github.com/Sharpiless)
-
-遵循 GNU General Public License v3.0 协议，标明目标检测部分来源：https://github.com/ultralytics/yolov5/
+修改新版pytorch中，torch.load 的参数控制加载行为
+![alt text](image-2.png)
 
 

@@ -32,11 +32,12 @@ class baseDet(object):
         }
         self.frameCounter += 1
 
-        im, faces, face_bboxes = update_tracker(self, im)
+        im, faces, face_bboxes,list_of_ids = update_tracker(self, im)
 
         retDict['frame'] = im
         retDict['faces'] = faces
         retDict['face_bboxes'] = face_bboxes
+        retDict['list_of_ids'] = list_of_ids
 
         return retDict
 
